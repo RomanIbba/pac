@@ -70,8 +70,7 @@ Pacman.Ghost = function(game, map, colour) {
     };
 
     function getRandomDirection() {
-        var moves = (direction === LEFT || direction === RIGHT) ?
-            [UP, DOWN] : [LEFT, RIGHT];
+        var moves = (direction === LEFT || direction === RIGHT) ? [UP, DOWN] : [LEFT, RIGHT];
         return moves[Math.floor(Math.random() * 2)];
     };
 
