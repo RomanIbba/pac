@@ -100,6 +100,7 @@ Pacman.Ghost = function(game, map, colour) {
     function eat() {
         eatable = null;
         eaten = game.getTick();
+
     };
 
     function pointToCoord(x) {
@@ -135,7 +136,7 @@ Pacman.Ghost = function(game, map, colour) {
         } else if (eaten) {
             return "#222";
         }
-        return colour;
+        return "#0000BB"; //colour;
     };
 
     function draw(ctx) {
@@ -148,8 +149,9 @@ Pacman.Ghost = function(game, map, colour) {
             eatable = null;
         }
 
-        if (eaten && secondsAgo(eaten) > 3) {
-            eaten = null;
+        if (eaten) { // && secondsAgo(eaten) > 3) {
+            position = { "x": 90, "y": 100 };
+            eaten != null;
         }
 
         var tl = left + s;
@@ -776,7 +778,7 @@ var PACMAN = (function() {
     var state = WAITING,
         audio = null,
         ghosts = [],
-        ghostSpecs = ["#00FFDE", "#FF0000", "#FFB8DE", "#FFB847"],
+        ghostSpecs = ["#00FFDE", "#FF0000", "#FFB8DE", "#FFB847", "#FFB8DE", "#FFB847"],
         eatenCount = 0,
         level = 0,
         tick = 0,
@@ -822,6 +824,7 @@ var PACMAN = (function() {
         audio.play("start");
         timerStart = tick;
         setState(COUNTDOWN);
+
     }
 
     function startNewGame() {
@@ -1135,7 +1138,7 @@ Pacman.MAP = [
     [0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0],
     [2, 2, 2, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 2, 2, 2],
     [0, 0, 0, 0, 1, 0, 1, 0, 0, 3, 0, 0, 1, 0, 1, 0, 0, 0, 0],
-    [2, 2, 2, 2, 1, 1, 1, 0, 3, 3, 3, 0, 1, 1, 1, 2, 2, 2, 2],
+    [2, 2, 2, 2, 1, 1, 1, 0, 2, 2, 2, 0, 1, 1, 1, 2, 2, 2, 2],
     [0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0],
     [2, 2, 2, 0, 1, 0, 1, 1, 1, 2, 1, 1, 1, 0, 1, 0, 2, 2, 2],
     [0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0],
