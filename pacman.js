@@ -951,16 +951,16 @@ var PACMAN = (function() {
                     setState(EATEN_PAUSE);
                     timerStart = tick;
                     if (eatenCount == 2) {
-                        document.getElementById("myText").innerHTML = "<p><img src=\"https://www.njea.org/wp-content/uploads/2014/10/Coding.jpg\" height=\"250px\" width=\"400px\"></p>";
+                        document.getElementById("myText").innerHTML = "<p><img src=\"pacLanguages.PNG\" height=\"250px\" width=\"400px\"></p>";
                     }
                     if (eatenCount == 4) {
-                        document.getElementById("myText2").innerHTML = "<p><img src=\"https://www.njea.org/wp-content/uploads/2014/10/Coding.jpg\" height=\"250px\" width=\"400px\"></p>";
+                        document.getElementById("myText2").innerHTML = "<p><img src=\"pacTechnologies.PNG\" height=\"250px\" width=\"400px\"></p>";
                     }
                     if (eatenCount == 6) {
-                        document.getElementById("myText3").innerHTML = "<p><img src=\"https://www.njea.org/wp-content/uploads/2014/10/Coding.jpg\" height=\"250px\" width=\"400px\"></p>";
+                        document.getElementById("myText3").innerHTML = "<p><img src=\"pacEducation.PNG\" height=\"250px\" width=\"400px\"></p>";
                     }
                     if (eatenCount == 8) {
-                        document.getElementById("myText4").innerHTML = "<p><img src=\"https://www.njea.org/wp-content/uploads/2014/10/Coding.jpg\" height=\"250px\" width=\"400px\"></p>";
+                        document.getElementById("myText4").innerHTML = "<p><img src=\"pacExperiences.PNG\" height=\"250px\" width=\"400px\"></p>";
                     }
                     // document.getElementById("myText").innerHTML = "<p><img src=\"https://www.njea.org/wp-content/uploads/2014/10/Coding.jpg\" height=\"250px\" width=\"400px\"></p>"; //  sends eaten ghost count to html page
                 } else if (ghosts[i].isDangerous()) {
